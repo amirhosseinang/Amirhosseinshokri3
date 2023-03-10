@@ -1,0 +1,78 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace AmirHosseinShokri3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+             string outout;
+
+            if (float.TryParse(grade.ToString(), out float graden))
+            {
+                int grades = int.Parse(grade);
+                if (grades >= 1 && grades <= 20)
+                {
+                    if (grades >= 17 && grades <= 20)
+                    {
+                        outout = "Rank A";
+                    }
+                    else if(grades >= 14 && grades <= 16)
+                    {
+                        outout = "Rank B";
+                    }
+                    else if (grades >= 11 && grades <= 13)
+                    {
+                        outout = "Rank C";
+                    }
+                    else if (grades >= 8 && grades <= 10)
+                    {
+                        outout = "Rank D";
+                    }
+                    else if (grades >= 0 && grades <= 7)
+                    {
+                        outout = "Rank E";
+                    }
+                    else
+                    {
+                        outout = "Rank F";
+                    }
+                }
+                else
+                {
+                    outout = "not 1 Between 20";
+                }
+            }
+            else
+            {
+                outout = "Invalid input. Please enter a valid number";
+            }
+            return outout;
+
+
+        }
+        static void Main(string[] args)
+        {
+             string number = Console.ReadLine();
+            Console.WriteLine(rank(number));
+            Console.WriteLine("Do you want to enter another grade? (y/n)");
+            string answer = Console.ReadLine();
+
+            if (answer == "y")
+            {
+                Main(args);
+            }
+            else
+            {
+                Console.WriteLine("Goodbye!");
+                Console.ReadKey();
+            }
+        }
+    }
+        }
+    }
+}
